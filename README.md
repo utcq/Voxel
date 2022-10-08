@@ -1,4 +1,4 @@
-[Logo](https://github.com/UnityTheCoder/Voxel/tree/main/doc)
+[Logo](https://github.com/UnityTheCoder/Voxel/blob/main/assets/logo.png?raw=true)
 # Voxel Programming Language
 
 Just 
