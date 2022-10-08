@@ -65,7 +65,6 @@
 	struct NAME {
 	
 		age: int;
-		
 	}
 	
 <br>
