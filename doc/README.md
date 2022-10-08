@@ -22,7 +22,7 @@
 
 #### Class Declaration
 
-	Class --> c
+	Class --> class
 	
 <br>
 
