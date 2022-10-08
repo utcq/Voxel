@@ -1,0 +1,41 @@
+include os;
+
+
+namespace custom
+{
+    function add(x,y) is int
+    {
+        return x+y;
+    }
+}
+
+struct data
+{
+    age: int;
+}
+
+class Main()
+{
+    static function add(this, x, y) is int
+    {
+        return x + y;
+    }
+    function Main(this)
+    {
+        printf(Main().add(1, 2));
+        var name = "Name";
+        var pname = _&name;
+        var nname = _*pname;
+        printf(nname);
+        freev(name);
+        custom::add-->5-->10;
+        std::callable-->"new";
+        var pointer = malloc(3);
+    }
+}
+
+/*
+Hello;
+*/
+
+
