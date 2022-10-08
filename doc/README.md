@@ -1,4 +1,4 @@
-# The Napoli Programming Language ![Logo](https://github.com/UnityTheCoder/NapoliProgrammingLanguge/blob/main/assets/nnapoli.png?raw=true)
+# Voxel Programming Language
 
 
 <br>
@@ -15,21 +15,21 @@
 
 #### Functions Declaration
 
-	Function --> sfaccimm
+	Function --> function
 	
 	
 <br>
 
 #### Class Declaration
 
-	Class --> camorra
+	Class --> c
 	
 <br>
 
 
 #### Pseudo Namespaces (to import namespaces see [importing](https://github.com/UnityTheCoder/NapoliProgrammingLanguge/blob/main/doc/README.md#importing-files))
 
-	bastardi::add << 42 << 50     -->      bastardi:add-->42-->50
+	namespace::add << 42 << 50     -->      namespace::add-->42-->50
 	
 <br>
 
@@ -42,7 +42,7 @@
 
 #### Namespaces Declaration
 
-	namespace bastardi {}
+	namespace custom_namespace {}
 	
 <br>
 
@@ -71,47 +71,47 @@
 <br>
 
 #### While Loop
-	While--> ammente
+	While--> while
 	
 <br>
 
 #### For Loop
 
-	For --> ppe
+	For --> for
 	
 <br>
 
 #### Importing Files
 
-	Include --> fratm
+	Include --> include
 	
 	
 <br>
 
 #### Importing Lib
 
-	Import --> mport
+	Import --> include
 	
 	
 <br>
 
 #### Printing
 
-	Print --> sput
+	Print --> printf
 	
 	
 <br>
 
 #### Declaring Variables
 
-	Var --> assaje
+	Var --> var
 	
 	
 <br>
 
 #### Carbage Collector
 
-	free --> liberu     (for vars)
+	free --> freev     (for vars)
 	free --> free        (for pointers)
 	
 	
@@ -119,7 +119,7 @@
 
 #### Return
 
-	Return --> turna
+	Return --> return
 	
 	
 <br>
@@ -133,7 +133,7 @@
 
 #### Static Functions
 
-	static -> ferm
+	static -> static
 	
 	
 <br>
@@ -149,27 +149,27 @@
 
 ### Keywords
 
-	Self = chiste
+	Self = this
 	
-	True = over
+	True = true
 	
-	False = falz
+	False = false
 	
-	Null = nente
+	Null = null
 	
-	Else if = si noni
+	Else if = else if
 	
 	
 <br>
 
 ### Conditions
 
-	If = si       [you can also use IF with ()]
+	If = if       [you can also use IF with ()]
 	
-	Else = autrimenti
+	Else = else
 	
-	With = ccu
+	With = with
 	
-	From = cata
+	From = from
 	
 
