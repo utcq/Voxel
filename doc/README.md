@@ -27,7 +27,7 @@
 <br>
 
 
-#### Pseudo Namespaces (to import namespaces see [importing](https://github.com/UnityTheCoder/NapoliProgrammingLanguge/blob/main/doc/README.md#importing-files))
+#### Pseudo Namespaces (to import namespaces see [importing](https://github.com/UnityTheCoder/NapoliProgrammingLanguge/blob/main/doc/README.md#importing-lib))
 
 	custom_namespace::add << 42 << 50     -->      custom_namespace::add-->42-->50
 	
