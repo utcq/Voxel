@@ -7,4 +7,4 @@ python3 src/interpreter.py -h
 For Help
 
 
-**Read doc/ for info**
+**Read [doc/](https://github.com/UnityTheCoder/Voxel/tree/main/doc) for info**
