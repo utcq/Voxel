@@ -44,6 +44,7 @@ def GetCode(filePath) -> str:
         Error("Input file not found")
 
 def HandleArgs() -> None:
+    print(sys.argv)
     if sys.argv[1] == "--help" or sys.argv[1] == "-h":
         Error('''
         Command line arguments:
