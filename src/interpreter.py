@@ -90,7 +90,6 @@ def HandleArgs() -> None:
                 fileName = sys.argv[3].split(".")[0]
                 with open(fileName + ".py", "w") as f:
                     f.write(parser.code)
-                print(path+" " + fileName + ".py"+" "+ " --onefile")
                 os.system(path+" " + fileName + ".py"+" "+ " --onefile")
                 os.rename("dist/{}".format(fileName+ext), "./"+sys.argv[3])
                 os.remove(fileName + ".py")
@@ -100,8 +99,8 @@ def HandleArgs() -> None:
             else:
                 Error("File not found")
     elif sys.argv[1] == "--update":
-        path = os.getcwd()
-        os.system(f"cd /usr/lib/voxel; sudo git pull https://github.com/UnityTheCoder/Voxel.git main; cd {path}")
+        pathz = os.getcwd()
+        os.system(f"cd /usr/lib/voxel; sudo git pull https://github.com/UnityTheCoder/Voxel.git main; cd {pathz}")
     else:
         Error("Invalid argument")
 
