@@ -1,8 +1,21 @@
+#!/usr/bin/python3
 #Native
 import os.path
 import subprocess
 import sys
 import shutil
+
+
+ext=""
+path="/usr/bin/python3 -m PyInstaller"
+
+if sys.platform == "linux" or platform == "linux2":
+    pass
+elif sys.platform == "darwin":
+    pass
+elif platform == "win32":
+    ext=".exe"
+    path="PyInstaller"
 
 #PyPy
 pyInstallerInstalled = True
@@ -75,10 +88,8 @@ def HandleArgs() -> None:
                 fileName = sys.argv[3].split(".")[0]
                 with open(fileName + ".py", "w") as f:
                     f.write(parser.code)
-                if (os.path.isfile(fileName + ".exe")):
-                    os.remove(fileName + ".exe")
-                subprocess.call(["PyInstaller", fileName + ".py", "--onefile"])
-                os.rename("dist/{}".format(fileName+".exe"), "./"+sys.argv[3])
+                os.system(path+" " + fileName + ".py"+" "+ " --onefile")
+                os.rename("dist/{}".format(fileName+ext), "./"+sys.argv[3])
                 os.remove(fileName + ".py")
                 os.remove(fileName + ".spec")
                 shutil.rmtree("build")
