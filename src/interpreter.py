@@ -55,7 +55,7 @@ def HandleArgs() -> None:
         --update: Updates the interpreter
             ''')
     elif sys.argv[1] == "--run" or sys.argv[1] == "-r":
-        if len(sys.argv) < 3:
+        if len(sys.argv) < 2:
             Error("Invalid number of arguments")
         else:
             if os.path.isfile(sys.argv[2]):
@@ -69,7 +69,7 @@ def HandleArgs() -> None:
         interpreter = Interpreter()
         interpreter.Interpret(parser.code)
     elif sys.argv[1] == "--transpile" or sys.argv[1] == "-t":
-        if len(sys.argv) < 4:
+        if len(sys.argv) < 3:
             Error("Invalid number of arguments")
         else:
             if os.path.isfile(sys.argv[2]):
