@@ -177,3 +177,17 @@
 
 
 ## Example [main.vx](https://github.com/UnityTheCoder/Voxel/blob/main/examples/main.vx) 
+
+<br>
+
+### Hello World
+
+```voxel
+class Main()
+{
+    function Main(this)
+    {
+        printf("Hello World!");
+    }
+}
+```
