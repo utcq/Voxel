@@ -52,6 +52,7 @@ def HandleArgs() -> None:
         --run -r (default) [file]: Runs the interpreter on the file specified
         --transpile -t [file] [address]: Converts the file specified into python code and saves it to the address specified
         --compile -c [file] [address]: Compiles the file specified into an executable and saves it to the address specified
+        --update: Updates the interpreter
             ''')
     elif sys.argv[1] == "--run" or sys.argv[1] == "-r":
         if len(sys.argv) < 3:
@@ -96,6 +97,8 @@ def HandleArgs() -> None:
                 shutil.rmtree("dist")
             else:
                 Error("File not found")
+    elif sys.argv[1] == "--update":
+        os.system("git pull https://github.com/UnityTheCoder/Voxel.git main")
     else:
         Error("Invalid argument")
 
