@@ -5,7 +5,8 @@ import subprocess
 import sys
 import shutil
 
-
+global ext
+global path
 ext=""
 path="/usr/bin/python3 -m PyInstaller"
 
