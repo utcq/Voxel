@@ -98,7 +98,8 @@ def HandleArgs() -> None:
             else:
                 Error("File not found")
     elif sys.argv[1] == "--update":
-        os.system("git pull https://github.com/UnityTheCoder/Voxel.git main")
+        path = os.getcwd()
+        os.system(f"cd /usr/lib/voxel; sudo git pull https://github.com/UnityTheCoder/Voxel.git main; cd {path}")
     else:
         Error("Invalid argument")
 
