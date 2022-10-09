@@ -90,6 +90,7 @@ def HandleArgs() -> None:
                 fileName = sys.argv[3].split(".")[0]
                 with open(fileName + ".py", "w") as f:
                     f.write(parser.code)
+                print(path+" " + fileName + ".py"+" "+ " --onefile")
                 os.system(path+" " + fileName + ".py"+" "+ " --onefile")
                 os.rename("dist/{}".format(fileName+ext), "./"+sys.argv[3])
                 os.remove(fileName + ".py")
