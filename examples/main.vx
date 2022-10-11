@@ -22,11 +22,11 @@ class Main()
     }
     function Main(this)
     {
-        printf(Main().add(1, 2));
+        prints(Main().add(1, 2));
         var name = "Name";
         var pname = _&name;
         var nname = _*pname;
-        printf(nname);
+        prints(nname);
         custom::add-->5-->10;
         std::callable-->"new";
         var pointer = malloc(3);
