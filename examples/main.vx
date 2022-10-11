@@ -27,10 +27,15 @@ class Main()
         var pname = _&name;
         var nname = _*pname;
         printf(nname);
-        freev(name);
         custom::add-->5-->10;
         std::callable-->"new";
         var pointer = malloc(3);
+        if(name=="Name"):
+            pass;
+        else if(name=="Unity"):
+            pass;
+        else:
+            pass;
     }
 }
 

@@ -36,8 +36,7 @@ class Parser:
     from pointers import _
     from pointers import c_malloc as malloc
     from pointers import c_free as free
-    from pointers import strcpy, cast
-    from pointers import Struct
+    from pointers import strcpy, cast, Struct, printf
 except:
     pass
 """ + code
@@ -210,45 +209,10 @@ except:
     def Parseassaje(self, code: str) -> str:
         code = code
         for line in code.splitlines():
-            if "var " in line and not self.IsInString("var ", line) and "=" in line:
+            if "var " in line and not self.IsInString("var ", line) and "=" in line and line.startswith("var"):
                 code = code.replace(line, line.replace("var ", ""))
         return code
 
-
-    def Parsesi(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "if" in line and not self.IsInString("if", line) and ":" in line:
-                code = code.replace(line, line.replace("if", "if"))
-        return code
-
-    def Parseautrimenti(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "else" in line and not self.IsInString("else", line):
-                code = code.replace(line, line.replace("else", "else"))
-        return code
-
-    def Parseco(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "with" in line and not self.IsInString("with", line) and ":" in line:
-                code = code.replace(line, line.replace("with", "with"))
-        return code
-
-    def Parsede(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "from" in line and not self.IsInString("from", line):
-                code = code.replace(line, line.replace("from", "from"))
-        return code
-
-    def Parseturna(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "return" in line and not self.IsInString("return", line):
-                code = code.replace(line, line.replace("return", "return"))
-        return code
 
 
 
@@ -350,18 +314,11 @@ except:
                 self.static.append(new)
         return code
 
-    def Parsesammente(self, code: str) -> str:
-        code = code
-        for line in code.splitlines():
-            if "while" in line and not self.IsInString("while", line):
-                code = code.replace(line, line.replace("while", "while"))
-        return code
-
     def Parsesput(self, code: str) -> str:
         code = code
         for line in code.splitlines():
-            if "printf" in line and not self.IsInString("printf", line):
-                code = code.replace(line, line.replace("printf", "print"))
+            if "prints" in line and not self.IsInString("prints", line):
+                code = code.replace(line, line.replace("prints", "print"))
         return code
 
     def CleanCode(self, code : str) -> str:

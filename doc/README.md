@@ -96,7 +96,7 @@
 
 #### Printing
 
-	Print --> printf
+	Print --> prints
 	
 	
 <br>
@@ -187,7 +187,7 @@ class Main()
 {
     function Main(this)
     {
-        printf("Hello World!");
+        prints("Hello World!");
     }
 }
 ```
