@@ -45,6 +45,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#syntax-highlighter">Syntax Highlighter</a></li>
         <li><a href="#update">Update</li>
         <li><a href="#usage">Usage</a></li>
       </ul>
@@ -111,7 +112,7 @@ python3 src/interpreter.py --update
 
 
 ## Syntax Highlighter
-Included in [Ultravim](https://github.com/xanteraka/Ultravim)
+**Included in [Ultravim](https://github.com/xanteraka/Ultravim)**
 
 
 ## Roadmap
