@@ -90,6 +90,7 @@ make install
 
 
 
+
 ## Usage
 ```bash
 python3 src/interpreter.py -h
@@ -109,13 +110,16 @@ python3 src/interpreter.py --update
 ```
 
 
+## Syntax Highlighter
+Included in [Ultravim](https://github.com/xanteraka/Ultravim)
+
 
 ## Roadmap
 
 - [x] Pointers
 - [x] Namespaces
 - [x] free & malloc
-- [ ] Syntax highlighter
+- [x] Syntax highlighter  
 
 
 
