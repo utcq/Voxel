@@ -20,16 +20,10 @@ class Parser:
         code = self.Parsestruct(code)
         code = self.ParseBraces(code)
         code = self.Parsefunctions(code)
-        code = self.Parsesammente(code)
-        code = self.Parsesi(code)
         code = self.Parseassaje(code)
         code = self.Parseliberu(code)
         code = self.Parsepe(code)
-        code = self.Parseautrimenti(code)
-        code = self.Parseco(code)
-        code = self.Parsede(code)
         code = self.Parsesput(code)
-        code = self.Parseturna(code)
         code = self.CleanCode(code)
         code = self.AddEntryPoint(code)
         code = """try:
@@ -209,7 +203,7 @@ except:
     def Parseassaje(self, code: str) -> str:
         code = code
         for line in code.splitlines():
-            if "var " in line and not self.IsInString("var ", line) and "=" in line and line.startswith("var"):
+            if "var " in line and not self.IsInString("var ", line) and "=" in line and line.strip().startswith("var"):
                 code = code.replace(line, line.replace("var ", ""))
         return code
 
