@@ -79,7 +79,7 @@ Now on [AUR](https://aur.archlinux.org/packages/voxel-lang)
 ```bash
 yay -S voxel-lang
 ```
-
+OR
 ```bash
 sh -c $(curl -L https://raw.githubusercontent.com/UnityTheCoder/Voxel/main/assets/install.sh)
 ```
