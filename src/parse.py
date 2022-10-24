@@ -11,11 +11,11 @@ class Parser:
 
     def Parse(self, code: str) -> str:
         #Parse code into normal python
-        code = self.ParseInclude(code)
-        code = self.ParseImport(code)
         code = self.ParseComments(code)
         code = self.ParseKeyWords(code)
         code = self.ParseEOL(code)
+        code = self.ParseInclude(code)
+        code = self.ParseImport(code)
         code = self.Parsenamespace(code)
         code = self.Parsestruct(code)
         code = self.ParseLBraces(code)
