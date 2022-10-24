@@ -61,7 +61,7 @@ except:
             for wordNo, word in enumerate(words):
                 if words[wordNo] == "from" and not self.IsInString(words[wordNo], line):
                     if words[wordNo + 1]== "native":
-                        if words[wordNo + 2] == "fratm":
+                        if words[wordNo + 2] == "#include":
                             words[wordNo] = f"from {words[wordNo + 3]} import *"
         for line in code.splitlines():
             words = line.split()
@@ -95,8 +95,8 @@ except:
     def ParseImport(self, code: str) -> str:
         code = code
         for line in code.splitlines():
-            if "include" in line and not self.IsInString("include", line):
-                code = code.replace(line, line.replace("include", "import"))
+            if "#include" in line and not self.IsInString("#include", line):
+                code = code.replace(line, line.replace("#include", "import"))
         return code
 
     def ParseKeyWords(self, code: str) -> str:
@@ -122,7 +122,7 @@ except:
 
         for line in code.splitlines():
             skipLine = False
-            for token in ("function","static", "while", "for", "if", "else", "else if", "with", "from", "namespace", '"""', "struct"):
+            for token in ("function","static", "while", "for", "if", "else", "else if", "with", "from", "namespace", '"""', "struct", "#include"):
                 if token in line and not self.IsInString(token, line):
                     skipLine = True
             if ''.join(line.split()).startswith(("{", "}", "\n", "class")):
