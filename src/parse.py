@@ -18,6 +18,7 @@ class Parser:
         code = self.ParseEOL(code)
         code = self.Parsenamespace(code)
         code = self.Parsestruct(code)
+        code = self.ParseLBraces(code)
         code = self.ParseBraces(code)
         code = self.Parsefunctions(code)
         code = self.Parseassaje(code)
@@ -61,7 +62,7 @@ except:
             for wordNo, word in enumerate(words):
                 if words[wordNo] == "from" and not self.IsInString(words[wordNo], line):
                     if words[wordNo + 1]== "native":
-                        if words[wordNo + 2] == "#include":
+                        if words[wordNo + 2] == "include":
                             words[wordNo] = f"from {words[wordNo + 3]} import *"
         for line in code.splitlines():
             words = line.split()
@@ -117,6 +118,28 @@ except:
                 code = code.replace(line, line.replace("else if", "elif"))
         return code
 
+
+    def ParseLBraces(self, code: str) -> str:
+        code = code
+        exp = [
+            "function",
+            "struct",
+            "class",
+            "static function",
+            "while",
+            "for",
+            "if",
+            "else",
+            "else if",
+            "namespace",
+        ]
+        for line in code.splitlines():
+            for ex in exp:
+                if line.strip().startswith(ex) and line.strip().endswith("{"):
+                    xline = line[:-1]
+                    xline += "\n{"
+                    code = code.replace(line, xline)
+        return code
     def ParseEOL(self, code: str) -> str:
         code = "".join([s for s in code.splitlines(True) if s.strip("\r\n")])
 
@@ -181,6 +204,8 @@ except:
             if "struct" in line and not self.IsInString("struct", line) and line.split(" ")[0] == "struct":
                 NAME = line.split(" ")[1]
                 newline = f"class {NAME}(Struct)"
+                if line.strip().endswith("{"):
+                    newline+=":"
                 code = code.replace(line, newline)
         return code
 
